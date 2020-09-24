@@ -1,0 +1,27 @@
+.homepage {
+  background-image: url("star\ wars\ app\ \(4\).jpg");
+  background-size: 100%;
+  height: 90vh;
+}
+
+header {
+  background-color: purple;
+}
+
+h1 {
+  color: rgb(158, 212, 75);
+}
+
+button {
+  background-color: rgb(201, 182, 201);
+  font-weight: bolder;
+
+
+}
+.btn-lg {
+  border-radius: 15px 50px;
+}
+
+.btn-location {
+  height: 70vh;
+}
