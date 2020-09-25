@@ -41,8 +41,10 @@ h1 {
   height: 30vh;
 }
 
-
 #info-name {
+  color: white;
+}
+#info-hair,#info-eyes, #info-gender {
   color: yellow;
 }
 .btn-lg {
