@@ -20,12 +20,28 @@
     <header>
       <h1 class="m-auto col-9 display-5 text-center p-2">May the Force be with You</h1>
     </header>
-    <div class="homepage">
+    <!-- <div class="homepage hidden">
       <div class="btn-location d-flex justify-content-center align-items-center">
-      <button class="btn-lg">ENTER</button>
+      <button class="btn-lg" id ="enter-btn">ENTER</button>
+      </div>
+    </div> -->
+    <div class="gen-homepage">
+      <div class="info-container">
+        <h2 id="info-name"></h2>
+      </div>
+      <div class="d-flex justify-content-center align-item-center">
+      <button class="next-btn" type ="button" id="next-btn" name="next-btn">NEXT</button>
+      </div>
+      <div class="d-flex justify-content-center no-wrap">
+        <button class="gif-btn" type="button" id="gif-btn">You, this is?</button>
+      </div>
+      <div id="gif" class="gif-container">
+
       </div>
     </div>
   </div>
+  <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+  <script src="app.js"></script>
 </body>
 
 </html>
