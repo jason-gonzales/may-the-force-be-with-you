@@ -33,25 +33,21 @@ function updateInfo(name,hair,eye) {
 
 }
 
-var images = "https://giphy.com/gifs/star-wars-no-14kjySOKhofYI";
-function getGif() {
 
+function getGif() {
+  var random2 = Math.floor((Math.random() * 10) + 1);
 $.ajax({
-  url: "https://api.giphy.com/v1/gifs/search?api_key=tQvMLCK2J2FBihuD16peIhsL4BrkbhAU&q=starwars&limit=25&offset=0&rating=g&lang=en",
+  url: "https://api.giphy.com/v1/gifs/search?api_key=tQvMLCK2J2FBihuD16peIhsL4BrkbhAU&q=starwars&limit=25&offset=0&rating=g&lang=en" + random2,
   method: "GET",
   success: function (data) {
-    console.log(images);
+    console.log(data.data[0]);
+    var image = document.createElement("iframe");
+    image.src = data.data[1].embed_url;
 
+    gifContainer.append(image);
   },
   error: function (error) {
     console.error(error)
   }
 })
-}
-
-function updateGif(data) {
-
-  gifContainer.innerText = images.src;
-
-
 }
