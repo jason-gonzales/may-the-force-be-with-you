@@ -1,3 +1,6 @@
+var enterButton = document.querySelector("#enter-btn");
+var homePage = document.querySelector(".homepage");
+var genPage = document.querySelector(".gen-homepage")
 var nextButton = document.querySelector("#next-btn");
 var infoName = document.querySelector("#info-name");
 var infoHair = document.querySelector("#info-hair");
@@ -7,6 +10,13 @@ var infoGender = document.querySelector("#info-gender");
 var gifButton = document.querySelector("#gif-btn");
 var gifContainer = document.querySelector("#gif");
 
+enterButton.addEventListener("click",flipPage);
+
+function flipPage() {
+homePage.classList.add("hidden");
+genPage.classList.remove("hidden");
+
+}
 
 nextButton.addEventListener("click",getInfo);
 // gifButton.addEventListener("click",getGif);
@@ -62,23 +72,3 @@ function updateInfo(data) {
 function clearImage() {
   gifContainer.textContent ="";
 }
-
-// function getGif() {
-//   var random2 = Math.floor((Math.random() * 10) + 1);
-// $.ajax({
-//   url: "https://api.giphy.com/v1/gifs/search?api_key=tQvMLCK2J2FBihuD16peIhsL4BrkbhAU&q=starwars&limit=30&offset=0&rating=g&lang=en" + random2,
-//   method: "GET",
-//   success: function (data) {
-//     var image = document.createElement("img");
-//     for(var i = 0; i < data.data.length; i++) {
-//     image.src = data.data[i].images.original.url;
-
-//     }
-//     gifContainer.append(image);
-//     image.className = "border-0";
-//   },
-//   error: function (error) {
-//     console.error(error)
-//   }
-// })
-// }
