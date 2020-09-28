@@ -1,4 +1,5 @@
 var enterButton = document.querySelector("#enter-btn");
+var homePageButton = document.querySelector("#home-btn");
 var homePage = document.querySelector(".homepage");
 var genPage = document.querySelector(".gen-homepage")
 var nextButton = document.querySelector("#next-btn");
@@ -13,11 +14,18 @@ var gifButton = document.querySelector("#gif-btn");
 var gifContainer = document.querySelector("#gif");
 
 enterButton.addEventListener("click",flipPage);
+homePageButton.addEventListener("click",homePageHandleClick);
 
 function flipPage() {
+  console.log("hit")
 homePage.classList.add("hidden");
 genPage.classList.remove("hidden");
 
+}
+
+function homePageHandleClick() {
+  genPage.classList.toggle("hidden");
+  homePage.classList.toggle("hidden");
 }
 
 nextButton.addEventListener("click",getInfo);
@@ -61,7 +69,7 @@ function updateInfo(data) {
 
 function getGif() {
 $.ajax({
-  url: "https://api.giphy.com/v1/gifs/search?q=" + character + "&api_key=tQvMLCK2J2FBihuD16peIhsL4BrkbhAU&q=starwars&limit=30&offset=0&rating=g&lang=en",
+  url: "https://api.giphy.com/v1/gifs/search?q=" + character + "&api_key=tQvMLCK2J2FBihuD16peIhsL4BrkbhAU&q=starwars&limit=40&offset=0&rating=g&lang=en",
   method: "GET",
 
   success: function (data) {
@@ -83,7 +91,6 @@ if(character === "C-3PO") {
 else {
 
   image.src = data.data[0].images.original.url;
-  console.log(image.src)
     gifContainer.append(image);
     image.className = "border-0";
 }

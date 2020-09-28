@@ -71,15 +71,20 @@ header {
   height: 87vh;
 
 }
-/* #enter-btn {
-  background-color: rgb(201, 182, 201);
-  font-weight: bolder;
-  border-radius: 15px 50px;
-} */
 
 .info-container {
   border: solid yellow;
   height: 40vh;
+}
+
+.homepage-btn{
+   font-family: 'Orbitron', sans-serif;
+  color: blue;
+  font-size: 12px;
+  margin-top:20px;
+  margin-bottom: 20px
+
+
 }
 .next-btn {
   color: #494949 !important;
@@ -114,7 +119,7 @@ transition: all 0.4s ease 0s;
 
 
 .btn-location {
-  /* height: 70vh; */
+
    width: 180px;
   height: 60px;
   position: absolute;
