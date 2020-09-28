@@ -37,7 +37,7 @@ function getInfo() {
   var random = Math.floor((Math.random() * 20) + 1);
 
   $.ajax({
-    url: "https://swapi.dev/api/people/" + random,
+    url: "https://swapi.dev/api/people/" + random + "/",
     method: "GET",
     // headers: {
     //   "Origin":null
