@@ -26,7 +26,8 @@ nextButton.addEventListener("click",getInfo);
 
 function getInfo() {
   clearImage();
-  var random = Math.floor((Math.random() * 40) + 1);
+  var random = Math.floor((Math.random() * 20) + 1);
+
   $.ajax({
     url: "https://swapi.dev/api/people/" + random,
     method: "GET",
@@ -39,12 +40,9 @@ function getInfo() {
       character = data.name;
       if (character){
         gifButton.addEventListener("click", getGif);
-      }
 
-      // getGif(character);
-      //pass in the name property of the response
-      //use the value from name property and concat to your url in your request
-      //when requesting api
+
+      }
 
     },
     error: function (error) {
@@ -60,7 +58,6 @@ function updateInfo(data) {
   infoGender.innerText = "gender: " + data.gender;
 
 }
-// console.log(character);
 
 function getGif() {
 $.ajax({
@@ -68,23 +65,40 @@ $.ajax({
   method: "GET",
 
   success: function (data) {
-    clearImage();
+
     var image = document.createElement("img");
 
+if(character === "C-3PO") {
+  gifContainer.classList.add("c3po");
+} else if(character === "R2-D2") {
+  gifContainer.classList.add("r2d2");
+} else if(character ==="Greedo") {
+  gifContainer.classList.add("greedo");
+} else if(character ==="Biggs Darklighter") {
+  gifContainer.classList.add("biggs");
+} else if(character ==="Beru Whitesun lars") {
+  gifContainer.classList.add("beru")
+}
+
+else {
 
   image.src = data.data[0].images.original.url;
+  console.log(image.src)
     gifContainer.append(image);
     image.className = "border-0";
-
+}
   },
   error: function (error) {
     console.error(error)
   }
 })
-
-
 }
-
 function clearImage() {
   gifContainer.textContent = "";
+  gifContainer.classList.remove("c3po")
+  gifContainer.classList.remove("r2d2")
+  gifContainer.classList.remove("greedo")
+  gifContainer.classList.remove("biggs")
+  gifContainer.classList.remove("beru")
+
 }
