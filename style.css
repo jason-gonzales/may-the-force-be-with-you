@@ -174,12 +174,18 @@ svg {
 
 
 .gif-btn {
-  width: 30%;
-  height: 40px;
+  font-family: 'Orbitron', sans-serif;
+  height: 45px;
   color: white;
   background-color: #a926dd;
   border: none;
   border-radius: 3px;
+
+
+}
+
+.info-container {
+  font-family:'Orbitron', sans-serif ;
 }
 
 .hidden {
