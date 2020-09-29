@@ -4,6 +4,7 @@ var homePage = document.querySelector(".homepage");
 var genPage = document.querySelector(".gen-homepage")
 var nextButton = document.querySelector("#next-btn");
 var infoName = document.querySelector("#info-name");
+var infoBirth = document.querySelector("#info-birth");
 var infoHair = document.querySelector("#info-hair");
 var infoEyes = document.querySelector("#info-eyes");
 var infoGender = document.querySelector("#info-gender");
@@ -61,9 +62,10 @@ function getInfo() {
 }
 function updateInfo(data) {
   infoName.innerText = data.name;
-  infoHair.innerText = "hair color: " + data.hair_color;
-  infoEyes.innerText = "eye color: " + data.eye_color;
-  infoGender.innerText = "gender: " + data.gender;
+  infoBirth.innerText = "birth year : " + data.birth_year;
+  infoHair.innerText = "hair color : " + data.hair_color;
+  infoEyes.innerText = "eye color : " + data.eye_color;
+  infoGender.innerText = "gender : " + data.gender;
 
 }
 
