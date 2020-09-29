@@ -20,42 +20,50 @@
   <div class-="container-fluid">
     <header>
       <div class="neon-wrapper">
-      <span class="txt">MAY THE FORCE BE WITH YOU</span>
-      <span class="gradient"></span>
-      <span class ="dodge"></span>
+        <span class="txt">MAY THE FORCE BE WITH YOU</span>
+        <span class="gradient"></span>
+        <span class="dodge"></span>
       </div>
     </header>
     <div class="homepage" id="home">
       <div class="btn-location d-flex justify-content-center align-items-center">
-        <button class="btn" id="enter-btn">
+        <button class="btn p-xl-10" id="enter-btn">
           <svg width="180px" height="60px" viewBox="0 0 180 60" class="border">
             <polyline points="179,1 179,59 1,59 1,1 179,1" class="bg-line" />
             <polyline points="179,1 179,59 1,59 1,1 179,1" class="hl-line" />
           </svg>
-          <span>ENTER</span>
+          <span class="enter-font">ENTER</span>
         </button>
-        <!-- <button class="btn-lg" id="enter-btn"><p>ENTER</p></button> -->
       </div>
     </div>
     <div class="gen-homepage hidden">
-      <div class="info-container">
+      <div class="info-container text-center">
         <h1 id="info-name"></h1>
+        <h3 id="info-birth"></h3>
         <h3 id="info-hair"></h3>
         <h3 id="info-eyes"></h3>
         <h3 id="info-gender"></h3>
-    </div>
-      <div class="button d-flex justify-content-center align-item-center">
-        <button class ="homepage-btn d flex" type ="button" id="home-btn">homepage</button>
-        <button class="next-btn btn-slide mt-1 justify-content-center ml-4" type="button" id="next-btn" name="next-btn">ACTIVATE</button>
       </div>
-      <div class="d-flex justify-content-center no-wrap">
-        <button class="gif-btn mt-2" type="button" id="gif-btn">check me out</button>
+      <div class="button-group row justify-content-center">
+        <div class="button d-flex">
+          <div class="d-flex">
+            <button class="homepage-btn mt-4 mr-2" type="button" id="home-btn">home</button>
+          </div>
+          <div>
+            <button class="next-btn btn-slide justify-content-center mt-4" type="button" id="next-btn"
+              name="next-btn">ACTIVATE</button>
+          </div>
+          <div class="d-flex justify-content-center no-wrap">
+            <button class="gif-btn mt-4 ml-2" type="button" id="gif-btn">get gif</button>
+          </div>
+        </div>
       </div>
-      <div id="gif" class="gif-container d-flex justify-content-center">
 
+        <div id="gif" class="gif-container d-flex justify-content-around">
+
+        </div>
       </div>
     </div>
-  </div>
     <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
     <script src="app.js"></script>
 </body>
