@@ -1,5 +1,5 @@
 # may-the-force-be-with-you
-A hackathon project utilizing the data from two public APIs that matches a random Star Wars character to a gif of that same character.
+A web application built with HTML, CSS, and Javascript that utilizes the data from two public APIs that matches a random Star Wars character and description to a gif image of that same character.
 
 ## Technologies Used
 - Javascript
