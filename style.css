@@ -1,9 +1,8 @@
 body {
-  background-image: url(./images/star-wars-app.jpg);
-  background-repeat: no-repeat;
+  background: url(./images/darthsmaller.jpg) no-repeat center fixed;
   background-size: cover;
-  width: 100%;
-  height: 100vh;
+  /* width: 100%;
+  height: 100vh; */
 }
 
 header {
@@ -68,7 +67,7 @@ header {
    /* background-image: url("./images/star-wars-app.jpg"); */
    background-size: cover;
    width: 100%;
-   height: 600px;
+   height: 700px;
   background-repeat: no-repeat;
   position: absolute;
   left: 50%;
@@ -84,7 +83,8 @@ header {
   background-image: url("./images/galaxy.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  height: 87vh;
+  height: 100vh;
+  width: 100%;
 
 }
 
@@ -203,7 +203,7 @@ svg {
 }
 
 .owen {
-  background-image: url("./images/owen-starwars.jpg");
+  background: url("./images/owen-starwars.jpg") center;
   width: 100%;
   height: 80px;
   background-repeat: no-repeat;
@@ -211,45 +211,48 @@ svg {
 }
 
 .c3po {
-  background-image: url('./images/c3po.jpg');
+  background: url('./images/c3po.jpg') center;
   background-size: 215px;
   background-repeat: no-repeat ;
-  margin-left: 70px;
+  width:100%;
+
 }
 
+/* @media screen and(max-width: ) */
+
 .r2d2 {
-   background-image: url('./images/r2d2.jpg');
+  background: url('./images/r2d2.jpg') center;
   background-size: 215px;
   background-repeat: no-repeat ;
-  margin-left: 100px;
+  width: 100%;
 }
 
 .greedo {
-    background-image: url('./images/greedo-starwars.jpg');
+    background: url('./images/greedo-starwars.jpg') center;
   background-size: 215px;
   background-repeat: no-repeat ;
-  margin-left: 70px;
+  width: 100%;
 }
 
 .biggs {
-     background-image: url('./images/biggs.starwars.jpg');
+     background: url('./images/biggs.starwars.jpg') center;
   background-size: 200px;
   background-repeat: no-repeat ;
-  margin-left: 75px;
+  width: 100%;
 }
 
 .beru {
-  background-image: url('./images/beru.starwars.jpg');
+  background: url('./images/beru.starwars.jpg') center;
   background-size: 200px;
   background-repeat: no-repeat ;
-  margin-left: 75px;
+  width: 100%;
 }
 .hidden {
   display: none;
 }
 
-@media screen and (min-width: 168px) {
+@media screen and (min-width: 1000px) {
   body {
-    background-color: black;
+    background-image: url(./images/darth.clear.starwars.jpg);
   };
 }
