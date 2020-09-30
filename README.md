@@ -9,8 +9,7 @@ A web application built with HTML, CSS, and Javascript that utilizes the data fr
 - HTML
 
 ## Live Demo
-Try the application live at
-
+Try the application live at https://jason-gonzales.github.io/may-the-force-be-with-you/
 ## Features
 
 - User can press a button from home screen to generated screen.
