@@ -22,6 +22,7 @@ function flipPage() {
 homePage.classList.add("hidden");
 genPage.classList.remove("hidden");
 
+
 }
 
 function homePageHandleClick() {
@@ -35,7 +36,7 @@ nextButton.addEventListener("click",getInfo);
 
 function getInfo() {
   clearImage();
-  var random = Math.floor((Math.random() * 20) + 1);
+  var random = Math.floor((Math.random() * 18) + 1);
 
   $.ajax({
     url: "https://swapi.dev/api/people/" + random + "/",
@@ -77,17 +78,23 @@ $.ajax({
   success: function (data) {
 
     var image = document.createElement("img");
+    var div = document.createElement("div");
 
 if(character === "C-3PO") {
-  gifContainer.classList.add("c3po");
+  div.classList.add("c3po");
+  gifContainer.append(div);
 } else if(character === "R2-D2") {
-  gifContainer.classList.add("r2d2");
+  div.classList.add("r2d2");
+  gifContainer.append(div);
 } else if(character ==="Greedo") {
-  gifContainer.classList.add("greedo");
+  div.classList.add("greedo");
+  gifContainer.append(div);
 } else if(character ==="Biggs Darklighter") {
-  gifContainer.classList.add("biggs");
+  div.classList.add("biggs");
+  gifContainer.append(div);
 } else if(character ==="Beru Whitesun lars") {
-  gifContainer.classList.add("beru")
+  div.classList.add("beru")
+  gifContainer.append(div);
 }
 
 else {
