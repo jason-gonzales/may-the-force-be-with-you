@@ -52,7 +52,7 @@ function getInfo() {
         gifButton.addEventListener("click", getGif);
 
 
-      }
+    }
 
     },
     error: function (error) {
@@ -100,6 +100,7 @@ if(character === "C-3PO") {
 else {
 
   image.src = data.data[0].images.original.url;
+  image.style.maxWidth = "220px";
     gifContainer.append(image);
     image.className = "border-0";
 }
