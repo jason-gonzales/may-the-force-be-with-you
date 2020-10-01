@@ -1,6 +1,7 @@
 body {
   background: url(./images/darthsmaller.jpg) no-repeat center fixed;
   background-size: cover;
+  overflow: hidden;
   /* width: 100%;
   height: 100vh; */
 }
@@ -16,6 +17,7 @@ header {
 .txt {
   color:#ffffff;
   background: #000000;
+  font-family: 'Orbitron',sans-serif;
   font-size: 30px;
   font-weight:bold;
   text-transform: uppercase;
@@ -81,6 +83,7 @@ header {
 
 .gen-homepage{
   background-image: url("./images/galaxy.swirl.jpg");
+
   background-repeat: no-repeat;
   background-size: cover;
   height: 120vh;
@@ -89,12 +92,34 @@ header {
 }
 
 .info-container {
-
-  /* border-radius: 25px ; */
+  border: solid  rgb(236, 233, 14);
+  border-radius: 25px ;
   background: rgba(0,0,0,.5);
   height: 300px;
+font-family:'Orbitron', sans-serif ;
 
+}
+.info-description {
+  font-family: 'Orbitron', sans-serif;
+  color: rgb(236, 233, 14);
+  font-size: 27px;
+  padding: 20px 20px;
+  position: relative;
+  animation: text;
+  animation-duration: 5s;
+}
 
+@keyframes text {
+  0%{bottom: -450px}
+  100%{bottom: 0px}
+}
+
+@media screen and (max-width: 760px) {
+  .info-description {
+    font-family: 'Orbitron', sans-serif;
+    color: rgb(236, 233, 14);
+    font-size: 16px;
+  };
 }
 
 .next-btn, .homepage-btn, .gif-btn{
@@ -104,25 +129,32 @@ text-transform: uppercase;
 text-decoration: none;
 background: #ffffff;
 padding: 10px;
-border: 4px solid #494949;
 display: inline-block;
 transition: all 0.4s ease 0s;
-font-family: 'Play',sans-serif;
-height: 45px;
+font-family: 'Orbitron',sans-serif;
 color: white;
-background-color: #a926dd;
- border: none;
+background-color:#1d1b1d;
+border: solid rgb(236, 233, 14);
 border-radius: 3px;
- margin-bottom: 5px;
-
-
+margin-bottom: 5px;
+opacity: 0;
+animation-name: buttons;
+animation-duration: 3s;
+animation-delay: 4s;
+animation-fill-mode: forwards;
 
 }
 
+@keyframes buttons {
+  0% {opacity: 0}
+  100% {opacity: 1}
+}
+
 .next-btn:hover, .homepage-btn:hover, .gif-btn:hover{
-color: purple;
-background: #f6ea3b;
-border-color: #f0ed37;
+color: black;
+font-weight: bold;
+background: rgb(236, 233, 14);
+border-color:rgb(236, 233, 14);
 transition: all 0.4s ease 0s;
 }
 .gif-container {
@@ -134,7 +166,7 @@ transition: all 0.4s ease 0s;
   color: white;
 }
 #info-birth,#info-hair,#info-eyes, #info-gender {
-  color: yellow;
+  color: rgb(236, 233, 14);
 }
 
 
@@ -150,12 +182,13 @@ transition: all 0.4s ease 0s;
 
 
 .btn {
+  font-family:'Orbitron', sans-serif;
   color: yellow;
   width: 180px;
   height: 60px;
   cursor: pointer;
   background: transparent;
-  border: 3px solid yellow;
+  border: 3px solid rgb(236, 233, 14);
   outline: none;
   transition: 0.20s ease-in-out;
   background: rgba(0,0,0,.8) ;
@@ -190,17 +223,6 @@ svg {
 
 
 
-.info-container {
-  font-family:'Orbitron', sans-serif ;
-}
-
-.owen {
-  background: url("./images/owen-starwars.jpg") center;
-  width: 100%;
-  height: 80px;
-  background-repeat: no-repeat;
-
-}
 
 .c3po {
   background: url('./images/c3po.jpg') center;
@@ -210,7 +232,6 @@ svg {
 
 }
 
-/* @media screen and(max-width: ) */
 
 .r2d2 {
   background: url('./images/r2d2.jpg') center;
@@ -235,6 +256,25 @@ svg {
 
 .beru {
   background: url('./images/beru.starwars.jpg') center;
+  background-size: 200px;
+  background-repeat: no-repeat ;
+  width: 100%;
+}
+
+.r5d4 {
+   background: url('./images/r5d4.starwars.jpg') center;
+  background-size: 250px;
+  background-repeat: no-repeat ;
+  width: 100%;
+}
+.obi {
+    background: url('./images/obi-wan.gif') center;
+  background-size: 280px;
+  background-repeat: no-repeat ;
+  width: 100%;
+}
+.owen {
+  background: url('./images/owen-lars.jpg') center;
   background-size: 200px;
   background-repeat: no-repeat ;
   width: 100%;
