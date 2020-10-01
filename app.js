@@ -16,7 +16,7 @@ enterButton.addEventListener("click",flipPage);
 homePageButton.addEventListener("click",homePageHandleClick);
 
 function flipPage() {
-  console.log("hit")
+
 homePage.classList.add("hidden");
 genPage.classList.remove("hidden");
 
@@ -26,6 +26,14 @@ genPage.classList.remove("hidden");
 function homePageHandleClick() {
   genPage.classList.toggle("hidden");
   homePage.classList.toggle("hidden");
+  nextButton.classList.remove("next-btn");
+  nextButton.classList.add("next-btn2");
+  gifButton.classList.remove("gif-btn");
+  gifButton.classList.add("gif-btn2");
+  homePageButton.classList.remove("homepage-btn");
+  homePageButton.classList.add("homepage-btn2");
+
+
 }
 
 nextButton.addEventListener("click",getInfo);
@@ -59,7 +67,7 @@ function getInfo() {
   })
 }
 function updateInfo(data) {
-  console.log(data);
+
   infoName.innerText = data.name;
   infoBirth.innerText = "birth year : " + data.birth_year;
   infoHair.innerText = "hair color : " + data.hair_color;
