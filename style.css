@@ -90,21 +90,13 @@ header {
 
 .info-container {
 
-  border-radius: 25px ;
+  /* border-radius: 25px ; */
   background: rgba(0,0,0,.5);
   height: 300px;
 
 
 }
 
-/* .homepage-btn{
-   font-family: 'Orbitron', sans-serif;
-  font-size: 15px;
-  margin-top:20px;
-  margin-bottom: 20px
-
-
-} */
 .next-btn, .homepage-btn, .gif-btn{
 margin: auto;
 color: #f1eded;
