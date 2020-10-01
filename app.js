@@ -8,11 +8,9 @@ var infoBirth = document.querySelector("#info-birth");
 var infoHair = document.querySelector("#info-hair");
 var infoEyes = document.querySelector("#info-eyes");
 var infoGender = document.querySelector("#info-gender");
-var character = null;
-
-
 var gifButton = document.querySelector("#gif-btn");
 var gifContainer = document.querySelector("#gif");
+var character = null;
 
 enterButton.addEventListener("click",flipPage);
 homePageButton.addEventListener("click",homePageHandleClick);
@@ -42,9 +40,7 @@ function getInfo() {
   $.ajax({
     url: "https://swapi.dev/api/people/" + random + "/",
     method: "GET",
-    // headers: {
-    //   "Origin":null
-    // },
+
     success: function (data) {
 
       updateInfo(data);
