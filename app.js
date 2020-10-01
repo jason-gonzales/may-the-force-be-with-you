@@ -32,9 +32,10 @@ function homePageHandleClick() {
 
 nextButton.addEventListener("click",getInfo);
 
-
+var infoDes = document.querySelector(".info-description");
 
 function getInfo() {
+  infoDes.classList.add("hidden");
   clearImage();
   var random = Math.floor((Math.random() * 18) + 1);
 
@@ -51,7 +52,7 @@ function getInfo() {
       if (character){
         gifButton.addEventListener("click", getGif);
 
-
+        gifButton.disabled = false;
     }
 
     },
@@ -62,6 +63,7 @@ function getInfo() {
   })
 }
 function updateInfo(data) {
+  console.log(data);
   infoName.innerText = data.name;
   infoBirth.innerText = "birth year : " + data.birth_year;
   infoHair.innerText = "hair color : " + data.hair_color;
@@ -95,15 +97,26 @@ if(character === "C-3PO") {
 } else if(character ==="Beru Whitesun lars") {
   div.classList.add("beru")
   gifContainer.append(div);
+} else if(character === "R5-D4") {
+  div.classList.add("r5d4");
+  gifContainer.append(div);
+} else if(character === "Obi-Wan Kenobi") {
+  div.classList.add("obi");
+  gifContainer.append(div);
+} else if(character === "Owen Lars") {
+  div.classList.add("owen");
+  gifContainer.append(div);
 }
 
 else {
 
   image.src = data.data[0].images.original.url;
-  image.style.maxWidth = "220px";
+  image.style.maxWidth = "250px";
     gifContainer.append(image);
     image.className = "border-0";
 }
+
+gifButton.disabled = true;
   },
   error: function (error) {
     console.error(error)
