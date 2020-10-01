@@ -47,7 +47,7 @@ header {
   height: 100%;
   mix-blend-mode:multiply;
 }
-  .dodge {
+  /* .dodge {
     background: radial-gradient(circle, white,black 35%) center / 25% 25%;
     position: absolute;
     top: -100%;
@@ -57,7 +57,7 @@ header {
     mix-blend-mode: color-dodge;
     animation: dodge-area 3s linear infinite;
 
-}
+} */
 
 @keyframes dodge-area {
   to {
@@ -96,9 +96,13 @@ header {
   border-radius: 25px ;
   background: rgba(0,0,0,.5);
   height: 300px;
-font-family:'Orbitron', sans-serif ;
+position:relative;
+
 
 }
+
+
+
 .info-description {
   font-family: 'Orbitron', sans-serif;
   color: rgb(236, 233, 14);
@@ -110,7 +114,7 @@ font-family:'Orbitron', sans-serif ;
 }
 
 @keyframes text {
-  0%{bottom: -450px}
+  0%{bottom: -650px}
   100%{bottom: 0px}
 }
 
