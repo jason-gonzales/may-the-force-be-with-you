@@ -1,7 +1,7 @@
 body {
   background: url(./images/darthsmaller.jpg) no-repeat center fixed;
   background-size: cover;
-  overflow: hidden;
+  /* overflow: hidden; */
 
 }
 
@@ -85,7 +85,8 @@ header {
   background-repeat: no-repeat;
   background-size: cover;
   height: 120vh;
-  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
 
 }
 
@@ -95,7 +96,7 @@ header {
   background: rgba(0,0,0,.5);
   height: 300px;
 position:relative;
-
+font-family: 'Orbitron',sans-serif;
 
 }
 
@@ -116,7 +117,7 @@ position:relative;
   100%{bottom: 0px}
 }
 
-@media screen and (max-width: 760px) {
+@media screen and (max-width: 840px) {
   .info-description {
     font-family: 'Orbitron', sans-serif;
     color: rgb(236, 233, 14);
@@ -124,6 +125,7 @@ position:relative;
   };
 }
 
+@media screen and (min-width: 750px) {
 .next-btn, .homepage-btn, .gif-btn{
 margin: auto;
 color: #f1eded;
@@ -146,6 +148,9 @@ animation-delay: 4s;
 animation-fill-mode: forwards;
 
 }
+}
+
+@media screen and (min-width: 750px) {
 .next-btn2, .homepage-btn2, .gif-btn2{
 margin: auto;
 color: #f1eded;
@@ -162,11 +167,33 @@ border: solid rgb(236, 233, 14);
 border-radius: 3px;
 margin-bottom: 5px;
 }
+}
+
+@media screen and (max-width: 749px) {
+.next-btn0, .homepage-btn0, .gif-btn0{
+margin: auto;
+color: #f1eded;
+text-transform: uppercase;
+text-decoration: none;
+background: #ffffff;
+padding: 10px;
+display: inline-block;
+transition: all 0.4s ease 0s;
+font-family: 'Orbitron',sans-serif;
+color: white;
+background-color:#1d1b1d;
+border: solid rgb(236, 233, 14);
+border-radius: 3px;
+margin-bottom: 5px;
+}
+}
 
 @keyframes buttons {
   0% {opacity: 0}
   100% {opacity: 1}
 }
+
+
 
 .next-btn:hover, .homepage-btn:hover, .gif-btn:hover{
 color: black;
@@ -313,4 +340,32 @@ svg {
   body {
     background-image: url(./images/darth.clear.starwars.jpg);
   };
+}
+
+@media screen and (max-width: 320px) {
+  .info-container {
+    height: 200px;
+
+  }
+
+  .info-description {
+    font-size: 12px;
+  }
+
+  .info {
+    font-size: 20px;
+  }
+
+  .c3po {
+    background-size: 180px;
+    height:100%;
+  }
+
+  .owen {
+    background-size: 160px;
+  }
+  .biggs {
+    background-size: 160px;
+  }
+
 }
