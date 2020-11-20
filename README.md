@@ -22,4 +22,4 @@ Try the application live at https://jason-gonzales.github.io/may-the-force-be-wi
 
 ## Preview
 
-![Watch the video](api.starwars.gif)
+![Watch the video](api.github.gif)
