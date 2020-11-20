@@ -21,4 +21,4 @@ Try the application live at https://jason-gonzales.github.io/may-the-force-be-wi
 - User can press a button that will take user back to the home screen.
 
 ## Preview
-![Watch the Video](api.github.gif)
+![Watch the Video](https://github.com/jason-gonzales/may-the-force-be-with-you/raw/master/starwars.api.gif)
