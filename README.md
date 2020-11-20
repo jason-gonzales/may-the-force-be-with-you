@@ -21,5 +21,4 @@ Try the application live at https://jason-gonzales.github.io/may-the-force-be-wi
 - User can press a button that will take user back to the home screen.
 
 ## Preview
-
-![Watch the video](api.starwars.gif)
+![alt text] (https://github.com/wicked-sales-js/images/favicon.png)
