@@ -7,10 +7,11 @@ var infoName = document.querySelector("#info-name");
 var infoBirth = document.querySelector("#info-birth");
 var infoHair = document.querySelector("#info-hair");
 var infoEyes = document.querySelector("#info-eyes");
-var infoGender = document.querySelector("#info-gender");
+var infoHome = document.querySelector("#info-home");
 var gifButton = document.querySelector("#gif-btn");
 var gifContainer = document.querySelector("#gif");
 var character = null;
+
 
 enterButton.addEventListener("click",flipPage);
 homePageButton.addEventListener("click",homePageHandleClick);
@@ -53,6 +54,7 @@ function getInfo() {
 
       updateInfo(data);
       character = data.name;
+
       if (character){
         gifButton.addEventListener("click", getGif);
 
@@ -66,13 +68,49 @@ function getInfo() {
 
   })
 }
+
 function updateInfo(data) {
+
+let homeworld = data.homeworld;
+
+// console.log(data.species)
+
+
+$.ajax({
+  url: homeworld,
+  method: "GET",
+
+  success: function (world) {
+
+    infoHome.innerText = "home : " + world.name;
+  },
+  error: function (error) {
+    console.error(error)
+  }
+})
+// $.ajax({
+//   url: data.species,
+//   method: "GET",
+
+//   success: function (species) {
+// if(species.name) {
+// infoSpecies.innerText = "species : " + species.name;
+// } else {
+//   infoSpecies.innerText = "species : human ";
+// }
+//   },
+//   error: function (error) {
+//     console.error(error)
+//   }
+// })
 
   infoName.innerText = data.name;
   infoBirth.innerText = "birth year : " + data.birth_year;
   infoHair.innerText = "hair color : " + data.hair_color;
   infoEyes.innerText = "eye color : " + data.eye_color;
-  infoGender.innerText = "gender : " + data.gender;
+
+
+
 
 }
 
@@ -114,6 +152,7 @@ if(character === "C-3PO") {
 
 else {
 
+  // console.log(data)
   image.src = data.data[0].images.original.url;
   // image.style.maxWidth = "250px";
     gifContainer.append(image);

@@ -215,14 +215,14 @@ border-color:rgb(236, 233, 14);
 transition: all 0.4s ease 0s;
 }
 .gif-container {
- 
+
   height: 30vh;
 }
 
 #info-name {
   color: white;
 }
-#info-birth,#info-hair,#info-eyes, #info-gender {
+#info-birth,#info-hair,#info-eyes, #info-gender, #info-home, #info-species {
   color: rgb(236, 233, 14);
 }
 
