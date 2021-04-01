@@ -8,6 +8,7 @@ var infoBirth = document.querySelector("#info-birth");
 var infoHair = document.querySelector("#info-hair");
 var infoEyes = document.querySelector("#info-eyes");
 var infoHome = document.querySelector("#info-home");
+var infoSpecies = document.querySelector("#info-species");
 var gifButton = document.querySelector("#gif-btn");
 var gifContainer = document.querySelector("#gif");
 var character = null;
@@ -77,7 +78,29 @@ home.splice(4,0,"s");
 let planet = home.join("");
 
 
-// console.log(data.species)
+let species = data.species[0];
+if(species) {
+  let splitSpecies = species.split("");
+  splitSpecies.splice(4, 0, "s");
+  species = splitSpecies.join("");
+
+  $.ajax({
+    url: species,
+    method: "GET",
+
+    success: function (species) {
+
+        infoSpecies.innerText = "species : " + species.name;
+
+    },
+    error: function (error) {
+      console.error(error)
+    }
+  })
+
+} else {
+  infoSpecies.innerText = "species : human";
+}
 
 
 $.ajax({
@@ -87,31 +110,18 @@ $.ajax({
   success: function (world) {
 
     infoHome.innerText = "home : " + world.name;
+    infoName.innerText = data.name;
+    infoBirth.innerText = "birth year : " + data.birth_year;
+    infoHair.innerText = "hair color : " + data.hair_color;
+    infoEyes.innerText = "eye color : " + data.eye_color;
+
   },
   error: function (error) {
     console.error(error)
   }
 })
-// $.ajax({
-//   url: data.species,
-//   method: "GET",
 
-//   success: function (species) {
-// if(species.name) {
-// infoSpecies.innerText = "species : " + species.name;
-// } else {
-//   infoSpecies.innerText = "species : human ";
-// }
-//   },
-//   error: function (error) {
-//     console.error(error)
-//   }
-// })
 
-  infoName.innerText = data.name;
-  infoBirth.innerText = "birth year : " + data.birth_year;
-  infoHair.innerText = "hair color : " + data.hair_color;
-  infoEyes.innerText = "eye color : " + data.eye_color;
 
 
 
