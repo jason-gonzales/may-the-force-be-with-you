@@ -72,12 +72,16 @@ function getInfo() {
 function updateInfo(data) {
 
 let homeworld = data.homeworld;
+let home = homeworld.split('');
+home.splice(4,0,"s");
+let planet = home.join("");
+
 
 // console.log(data.species)
 
 
 $.ajax({
-  url: homeworld,
+  url: planet,
   method: "GET",
 
   success: function (world) {
