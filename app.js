@@ -45,7 +45,7 @@ var infoDes = document.querySelector(".info-description");
 function getInfo() {
   infoDes.classList.add("hidden");
   clearImage();
-  var random = Math.floor((Math.random() * 18) + 1);
+  var random = Math.floor((Math.random() * 24) + 1);
 
   $.ajax({
     url: "https://swapi.dev/api/people/" + random + "/",
